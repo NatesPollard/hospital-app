@@ -34,8 +34,9 @@ export class HospitalComponent {
 
   constructor(private totalCountService: TotalCountService) {}
 
+   // Calculating the total count of doctors and patients
   get totalCount(): number {
-    return this.totalCountService.calculateTotal(
+    return this.totalCountService.calculateTotal( // use calculateTotal method from TotalCountService
       this.hospitalDoctors.length,
       this.hospitalPatients.length
     );
